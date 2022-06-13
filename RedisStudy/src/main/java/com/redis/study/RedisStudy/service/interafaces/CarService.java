@@ -2,7 +2,7 @@ package com.redis.study.RedisStudy.service.interafaces;
 
 import com.redis.study.RedisStudy.model.Car;
 
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author Dante Basso <${company.email}>
@@ -13,5 +13,7 @@ public interface CarService {
     Car create(Car car);
 
     Car retrieve(String id);
+
+    List<Car> listAll();
 
 }

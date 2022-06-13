@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author Dante Basso <dcbasso@gmail.com>
@@ -32,10 +32,14 @@ public class CarResourceImpl implements CarResource {
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public ResponseEntity<Car> retrieve(@PathVariable final String id) {
         final Car retrieved = this.carService.retrieve(id);
-//        if (retrieve.isEmpty()) {
-//            return ResponseEntity.notFound().build();
-//        }
         return ResponseEntity.ok(retrieved);
+    }
+
+    @Override
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<List<Car>> listAll() {
+        final List<Car> cars = this.carService.listAll();
+        return ResponseEntity.ok(cars);
     }
 
 }
