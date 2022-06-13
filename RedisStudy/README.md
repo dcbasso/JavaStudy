@@ -26,7 +26,11 @@ These additional references should also help you:
 
 docker run --name redis-study redis -p 6379:6379
 
-
 ### DETAILS
 
-Using CrudRepository from Spring, with standalone Docker/Redis config
+Using CrudRepository from Spring, with standalone Docker/Redis config.
+
+### MORE ABOUT
+
+- https://www.baeldung.com/spring-data-redis-tutorial
+- https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/
