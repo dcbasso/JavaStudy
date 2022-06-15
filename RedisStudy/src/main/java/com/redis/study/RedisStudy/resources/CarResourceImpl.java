@@ -31,7 +31,7 @@ public class CarResourceImpl implements CarResource {
     @Override
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public ResponseEntity<Car> retrieve(@PathVariable final String id) {
-        final Car retrieved = this.carService.retrieve(id);
+        final Car retrieved = this.carService.findById(id);
         return ResponseEntity.ok(retrieved);
     }
 

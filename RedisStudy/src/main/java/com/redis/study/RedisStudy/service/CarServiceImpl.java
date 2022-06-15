@@ -22,12 +22,11 @@ public class CarServiceImpl implements CarService {
     @Override
     public Car create(final Car car) {
         car.setId(UUID.randomUUID().toString());
-
         return this.carRepository.save(car);
     }
 
     @Override
-    public Car retrieve(final String id) {
+    public Car findById(final String id) {
         Objects.requireNonNull(id);
         return this.carRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Could not found Car with ID " + id));
     }

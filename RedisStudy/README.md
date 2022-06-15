@@ -34,3 +34,18 @@ Using CrudRepository from Spring, with standalone Docker/Redis config.
 
 - https://www.baeldung.com/spring-data-redis-tutorial
 - https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/
+
+### Integration Tests
+
+Using testcontainers we can create and use a real docker connection to test the integration with database.
+
+See more:  https://www.testcontainers.org/
+
+### This Project Uses
+
+Java SDK: 17
+Spring Boot: 2.7.0
+Test Containers: 1.17.2
+Junit: 5.8.1
+Apache Commons: 3.12.0
+Lombok
