@@ -2,7 +2,7 @@ package com.redis.study.RedisStudy.resources;
 
 import com.redis.study.RedisStudy.model.Car;
 import com.redis.study.RedisStudy.resources.interfaces.CarResource;
-import com.redis.study.RedisStudy.service.interafaces.CarService;
+import com.redis.study.RedisStudy.service.interfaces.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -3,14 +3,11 @@ package com.redis.study.RedisStudy.service;
 import com.redis.study.RedisStudy.exceptions.ObjectNotFoundException;
 import com.redis.study.RedisStudy.model.Car;
 import com.redis.study.RedisStudy.repository.CarRepository;
-import com.redis.study.RedisStudy.service.interafaces.CarService;
+import com.redis.study.RedisStudy.service.interfaces.CarService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 /**
  * @author Dante Basso <dcbasso@gmail.com>
@@ -39,9 +36,6 @@ public class CarServiceImpl implements CarService {
     public List<Car> listAll() {
         final Iterable<Car> carIterable = this.carRepository.findAll();
         final List<Car> cars = new ArrayList<Car>();
-//        for (Car car : carIterable) {
-//            cars.add(car);
-//        }
         carIterable.iterator().forEachRemaining(cars::add);
         return cars;
     }
