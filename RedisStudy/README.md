@@ -43,9 +43,9 @@ See more:  https://www.testcontainers.org/
 
 ### This Project Uses
 
-Java SDK: 17
-Spring Boot: 2.7.0
-Test Containers: 1.17.2
-Junit: 5.8.1
-Apache Commons: 3.12.0
-Lombok
+- Java SDK: 17
+- Spring Boot: 2.7.0
+- Test Containers: 1.17.2
+- Junit: 5.8.1
+- Apache Commons: 3.12.0
+- Lombok
