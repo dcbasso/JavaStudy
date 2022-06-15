@@ -7,6 +7,21 @@
 	"item": [
 		{
 			"name": "Create Car",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let responseData=pm.response.json();",
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							"pm.collectionVariables.set(\"newCarId\", responseData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -38,14 +53,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/cars/c7737f9f-e971-47a3-9c8e-62a21d738819",
+					"raw": "localhost:8080/cars/{{newCarId}}",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"cars",
-						"c7737f9f-e971-47a3-9c8e-62a21d738819"
+						"{{newCarId}}"
 					]
 				}
 			},
@@ -68,6 +83,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "newCarId",
+			"value": ""
 		}
 	]
 }

@@ -12,7 +12,7 @@ public interface CarService {
 
     Car create(Car car);
 
-    Car retrieve(String id);
+    Car findById(String id);
 
     List<Car> listAll();
 
