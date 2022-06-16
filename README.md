@@ -1,4 +1,4 @@
-# JavaStudy
+# Java Study
 
 ### graphql
 
