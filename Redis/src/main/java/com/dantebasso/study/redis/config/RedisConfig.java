@@ -1,4 +1,4 @@
-package com.redis.study.RedisStudy.config;
+package com.dantebasso.study.redis.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;

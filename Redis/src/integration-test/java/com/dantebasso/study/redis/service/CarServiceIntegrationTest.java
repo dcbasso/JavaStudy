@@ -1,7 +1,7 @@
-package com.redis.study.RedisStudy.service;
+package com.dantebasso.study.redis.service;
 
-import com.redis.study.RedisStudy.model.Car;
-import com.redis.study.RedisStudy.service.interfaces.CarService;
+import com.dantebasso.study.redis.model.Car;
+import com.dantebasso.study.redis.service.interfaces.CarService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

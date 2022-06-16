@@ -1,4 +1,4 @@
-package com.redis.study.RedisStudy;
+package com.dantebasso.study.redis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

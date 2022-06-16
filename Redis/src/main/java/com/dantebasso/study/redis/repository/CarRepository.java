@@ -1,6 +1,6 @@
-package com.redis.study.RedisStudy.repository;
+package com.dantebasso.study.redis.repository;
 
-import com.redis.study.RedisStudy.model.Car;
+import com.dantebasso.study.redis.model.Car;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

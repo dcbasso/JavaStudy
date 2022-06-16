@@ -1,4 +1,4 @@
-package com.redis.study.RedisStudy.model;
+package com.dantebasso.study.redis.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
