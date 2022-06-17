@@ -1,8 +1,8 @@
-package com.redis.study.RedisStudy.resources;
+package com.dantebasso.study.redis.resources;
 
-import com.redis.study.RedisStudy.model.Car;
-import com.redis.study.RedisStudy.resources.interfaces.CarResource;
-import com.redis.study.RedisStudy.service.interfaces.CarService;
+import com.dantebasso.study.redis.model.Car;
+import com.dantebasso.study.redis.resources.interfaces.CarResource;
+import com.dantebasso.study.redis.service.interfaces.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

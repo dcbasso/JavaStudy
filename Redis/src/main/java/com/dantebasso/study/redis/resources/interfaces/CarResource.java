@@ -1,6 +1,6 @@
-package com.redis.study.RedisStudy.resources.interfaces;
+package com.dantebasso.study.redis.resources.interfaces;
 
-import com.redis.study.RedisStudy.model.Car;
+import com.dantebasso.study.redis.model.Car;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

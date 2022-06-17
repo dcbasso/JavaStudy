@@ -1,4 +1,4 @@
-package com.redis.study.RedisStudy.exceptions;
+package com.dantebasso.study.redis.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

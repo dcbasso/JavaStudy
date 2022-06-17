@@ -1,9 +1,9 @@
-package com.redis.study.RedisStudy.service;
+package com.dantebasso.study.redis.service;
 
-import com.redis.study.RedisStudy.exceptions.ObjectNotFoundException;
-import com.redis.study.RedisStudy.model.Car;
-import com.redis.study.RedisStudy.repository.CarRepository;
-import com.redis.study.RedisStudy.service.interfaces.CarService;
+import com.dantebasso.study.redis.exceptions.ObjectNotFoundException;
+import com.dantebasso.study.redis.model.Car;
+import com.dantebasso.study.redis.repository.CarRepository;
+import com.dantebasso.study.redis.service.interfaces.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

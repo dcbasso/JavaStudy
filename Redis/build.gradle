@@ -18,6 +18,21 @@ repositories {
 	mavenCentral()
 }
 
+sourceSets {
+	integrationTest {
+		compileClasspath += sourceSets.main.output
+		runtimeClasspath += sourceSets.main.output
+		java {
+			srcDirs = ['src/integration-test/java']
+		}
+	}
+}
+
+configurations {
+	integrationTestImplementation.extendsFrom implementation
+	integrationTestRuntimeOnly.extendsFrom runtimeOnly
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -26,12 +41,33 @@ dependencies {
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
-	testImplementation "org.testcontainers:testcontainers:1.17.2"
-	testImplementation "org.testcontainers:junit-jupiter:1.17.2"
+	testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.6.1'
+	testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.6.1'
+
+	integrationTestImplementation 'org.springframework.boot:spring-boot-starter-test'
+	integrationTestImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+	integrationTestImplementation "org.testcontainers:testcontainers:1.17.2"
+	integrationTestImplementation "org.testcontainers:junit-jupiter:1.17.2"
 }
 
 tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.register('integrationTest', Test) {
+	description = 'Runs integration tests.'
+	group = 'verification'
+
+	testClassesDirs = sourceSets.integrationTest.output.classesDirs
+	classpath = sourceSets.integrationTest.runtimeClasspath
+	shouldRunAfter test
+}
+
+check.dependsOn integrationTest
+
+integrationTest {
 	useJUnitPlatform()
 }

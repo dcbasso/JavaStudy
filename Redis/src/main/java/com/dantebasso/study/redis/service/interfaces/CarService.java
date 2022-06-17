@@ -1,6 +1,6 @@
-package com.redis.study.RedisStudy.service.interfaces;
+package com.dantebasso.study.redis.service.interfaces;
 
-import com.redis.study.RedisStudy.model.Car;
+import com.dantebasso.study.redis.model.Car;
 
 import java.util.List;
 
